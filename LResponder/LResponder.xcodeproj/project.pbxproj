@@ -30,6 +30,11 @@
 		088F314E212D650300BCA7F4 /* icon87x87.png in Resources */ = {isa = PBXBuildFile; fileRef = 088F3149212D650200BCA7F4 /* icon87x87.png */; };
 		088F3151212D654400BCA7F4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 088F314F212D654400BCA7F4 /* icon.png */; };
 		088F3152212D654400BCA7F4 /* icon1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 088F3150212D654400BCA7F4 /* icon1024x1024.png */; };
+		088F3154212E8A2300BCA7F4 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088F3153212E8A2300BCA7F4 /* Reachability.framework */; };
+		088F3156212EA35B00BCA7F4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088F3155212EA35B00BCA7F4 /* AudioToolbox.framework */; };
+		088F315B212EABED00BCA7F4 /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 088F3159212EABED00BCA7F4 /* fail.mp3 */; };
+		088F315C212EABED00BCA7F4 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 088F315A212EABED00BCA7F4 /* success.mp3 */; };
+		C7298AA0F1E50BAB9687840C /* Pods_LResponder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0C51856071B66BB7E7FAB7 /* Pods_LResponder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,13 @@
 		088F3149212D650200BCA7F4 /* icon87x87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon87x87.png; sourceTree = "<group>"; };
 		088F314F212D654400BCA7F4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		088F3150212D654400BCA7F4 /* icon1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1024x1024.png; sourceTree = "<group>"; };
+		088F3153212E8A2300BCA7F4 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		088F3155212EA35B00BCA7F4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		088F3159212EABED00BCA7F4 /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
+		088F315A212EABED00BCA7F4 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		BB0C51856071B66BB7E7FAB7 /* Pods_LResponder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LResponder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA91D47EE34E364EBF4DC77C /* Pods-LResponder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LResponder.release.xcconfig"; path = "Pods/Target Support Files/Pods-LResponder/Pods-LResponder.release.xcconfig"; sourceTree = "<group>"; };
+		F2634F28B8443FC4D1562D28 /* Pods-LResponder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LResponder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LResponder/Pods-LResponder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088F3156212EA35B00BCA7F4 /* AudioToolbox.framework in Frameworks */,
+				088F3154212E8A2300BCA7F4 /* Reachability.framework in Frameworks */,
+				C7298AA0F1E50BAB9687840C /* Pods_LResponder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,8 @@
 			children = (
 				084B83CA212A8936002802B4 /* LResponder */,
 				084B83C9212A8936002802B4 /* Products */,
+				1C0C11C2068E5F32304CF96F /* Pods */,
+				AD5A586BC94B903B07A7BACE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +109,7 @@
 		084B83CA212A8936002802B4 /* LResponder */ = {
 			isa = PBXGroup;
 			children = (
+				088F3158212EABDF00BCA7F4 /* sounds */,
 				088F313A212D45CD00BCA7F4 /* pics */,
 				0820CE31212A8B44006B5C8F /* GCDAsyncSocket.h */,
 				0820CE30212A8B44006B5C8F /* GCDAsyncSocket.m */,
@@ -130,6 +148,34 @@
 			name = pics;
 			sourceTree = "<group>";
 		};
+		088F3158212EABDF00BCA7F4 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				088F3159212EABED00BCA7F4 /* fail.mp3 */,
+				088F315A212EABED00BCA7F4 /* success.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		1C0C11C2068E5F32304CF96F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2634F28B8443FC4D1562D28 /* Pods-LResponder.debug.xcconfig */,
+				CA91D47EE34E364EBF4DC77C /* Pods-LResponder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD5A586BC94B903B07A7BACE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				088F3155212EA35B00BCA7F4 /* AudioToolbox.framework */,
+				088F3153212E8A2300BCA7F4 /* Reachability.framework */,
+				BB0C51856071B66BB7E7FAB7 /* Pods_LResponder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 084B83DA212A8937002802B4 /* Build configuration list for PBXNativeTarget "LResponder" */;
 			buildPhases = (
+				157EE22B038F091A79DE9C06 /* [CP] Check Pods Manifest.lock */,
 				084B83C4212A8936002802B4 /* Sources */,
 				084B83C5212A8936002802B4 /* Frameworks */,
 				084B83C6212A8936002802B4 /* Resources */,
+				209E0D1E517352475C365539 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,9 +244,11 @@
 				088F3144212D645B00BCA7F4 /* icon60x60.png in Resources */,
 				088F313C212D45DA00BCA7F4 /* Mode_Button.png in Resources */,
 				088F314B212D650300BCA7F4 /* icon180x180.png in Resources */,
+				088F315C212EABED00BCA7F4 /* success.mp3 in Resources */,
 				088F314D212D650300BCA7F4 /* icon80x80.png in Resources */,
 				088F3151212D654400BCA7F4 /* icon.png in Resources */,
 				084B83D1212A8936002802B4 /* Main.storyboard in Resources */,
+				088F315B212EABED00BCA7F4 /* fail.mp3 in Resources */,
 				088F314A212D650300BCA7F4 /* icon120x120.png in Resources */,
 				088F314E212D650300BCA7F4 /* icon87x87.png in Resources */,
 				088F3152212D654400BCA7F4 /* icon1024x1024.png in Resources */,
@@ -206,6 +256,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		157EE22B038F091A79DE9C06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LResponder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		209E0D1E517352475C365539 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LResponder/Pods-LResponder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LResponder/Pods-LResponder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		084B83C4212A8936002802B4 /* Sources */ = {
@@ -363,6 +452,7 @@
 		};
 		084B83DB212A8937002802B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2634F28B8443FC4D1562D28 /* Pods-LResponder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -384,6 +474,7 @@
 		};
 		084B83DC212A8937002802B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA91D47EE34E364EBF4DC77C /* Pods-LResponder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

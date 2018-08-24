@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,6 +113,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VjA-iz-N2K">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="365"/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="4BX-WV-m71"/>
                                     <constraint firstAttribute="height" constant="365" id="cQj-9k-9Pq"/>
@@ -132,6 +133,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyP-JQ-rHH">
                                                             <rect key="frame" x="0.0" y="0.0" width="170" height="21.5"/>
+                                                            <color key="tintColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -164,6 +166,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="seqLabel" destination="efk-2p-Nqu" id="zLa-Wj-EWs"/>
                                             <outlet property="teamNameLabel" destination="nyP-JQ-rHH" id="kLm-jF-O6N"/>
@@ -187,6 +190,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="dje-tl-l34" firstAttribute="top" secondItem="VjA-iz-N2K" secondAttribute="bottom" constant="20" id="5ZW-oA-8ar"/>
                             <constraint firstItem="VjA-iz-N2K" firstAttribute="centerX" secondItem="OGK-FB-9vs" secondAttribute="centerX" id="7mY-Cw-vzm"/>
@@ -231,31 +235,55 @@
                                     <action selector="respondBtnTouched:" destination="GGf-2h-hNV" eventType="touchUpInside" id="BP9-aM-rs7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdU-m4-QaP">
-                                <rect key="frame" x="16" y="31" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdU-m4-QaP">
+                                <rect key="frame" x="20" y="30" width="95" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="Huq-XF-HIl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peX-TO-Z9v">
-                                <rect key="frame" x="16" y="60" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peX-TO-Z9v">
+                                <rect key="frame" x="20" y="56" width="280" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="8bn-qk-K9d"/>
+                                    <constraint firstAttribute="height" constant="32" id="z4l-kt-dE5"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POi-gS-4Rv">
+                                <rect key="frame" x="20" y="138" width="280" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="2tu-ei-aWm"/>
+                                    <constraint firstAttribute="height" constant="24" id="ws2-Vy-pQb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="peX-TO-Z9v" firstAttribute="top" secondItem="pdU-m4-QaP" secondAttribute="bottom" constant="5" id="IMb-ft-Rju"/>
+                            <constraint firstItem="k7B-Ca-J2y" firstAttribute="top" secondItem="POi-gS-4Rv" secondAttribute="bottom" constant="30" id="JLY-q1-zri"/>
+                            <constraint firstItem="peX-TO-Z9v" firstAttribute="centerX" secondItem="Z7x-CA-iHc" secondAttribute="centerX" id="KVp-jS-l0z"/>
+                            <constraint firstItem="POi-gS-4Rv" firstAttribute="centerX" secondItem="Z7x-CA-iHc" secondAttribute="centerX" id="Kgh-fb-I2q"/>
+                            <constraint firstItem="POi-gS-4Rv" firstAttribute="top" secondItem="peX-TO-Z9v" secondAttribute="bottom" constant="50" id="Ky5-Xz-ND1"/>
+                            <constraint firstItem="pdU-m4-QaP" firstAttribute="top" secondItem="U9O-Gh-VUQ" secondAttribute="top" constant="30" id="LYr-MR-5G0"/>
                             <constraint firstItem="k7B-Ca-J2y" firstAttribute="centerY" secondItem="Z7x-CA-iHc" secondAttribute="centerY" id="Nlw-X0-7a2"/>
+                            <constraint firstItem="peX-TO-Z9v" firstAttribute="top" secondItem="pdU-m4-QaP" secondAttribute="bottom" constant="5" id="SEs-O9-GSa"/>
                             <constraint firstItem="k7B-Ca-J2y" firstAttribute="centerX" secondItem="Z7x-CA-iHc" secondAttribute="centerX" id="h3J-6b-I32"/>
+                            <constraint firstItem="pdU-m4-QaP" firstAttribute="leading" secondItem="U9O-Gh-VUQ" secondAttribute="leading" constant="20" id="mNE-LU-Zfe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9O-Gh-VUQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="xeM-lw-efZ"/>
                     <connections>
                         <outlet property="respondBtn" destination="k7B-Ca-J2y" id="xfq-p4-Zkl"/>
+                        <outlet property="resultLabel" destination="POi-gS-4Rv" id="IHd-jQ-MvH"/>
                         <outlet property="teamNameInput" destination="peX-TO-Z9v" id="pSE-aW-Y2d"/>
                     </connections>
                 </viewController>

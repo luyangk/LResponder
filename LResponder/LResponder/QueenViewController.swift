@@ -27,7 +27,7 @@ class QueenViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func clearTimeAndSeq() {
         var count = 1
-        for (deviceName, tmpStr) in self.dataList {
+        for (deviceName, _) in self.dataList {
             self.dataList[deviceName] = "0:" + String(count)
             count += 1
         }
@@ -35,15 +35,19 @@ class QueenViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func sortDataList() {
+        var hasWinner = false
         for (deviceName, tmpStr) in self.dataList {
             let tmpStrArr = tmpStr.split(separator: ":")
             if String(tmpStrArr[0]) == "0" {
                 self.dataList[deviceName] = "0:" + String(self.dataList.count)
             } else {
+                if hasWinner == false {
+                    hasWinner = true
+                }
                 var count = 1
                 for (d, s) in self.dataList {
                     if deviceName != d {
-                        if Double(tmpStrArr[0])! > Double(s.split(separator: ":")[0])! {
+                        if Double(tmpStrArr[0])! > Double(s.split(separator: ":")[0])! && s.split(separator: ":")[0] != "0"{
                             count += 1
                         }
                     }
@@ -51,10 +55,26 @@ class QueenViewController: UIViewController, UITableViewDataSource, UITableViewD
                 self.dataList[deviceName] = String(tmpStrArr[0]) + ":" + String(count)
             }
         }
+        if hasWinner == true {
+            var content = "Winner:"
+            for (deviceName, tmpStr) in self.dataList {
+                let tmpStrArr = tmpStr.split(separator: ":")
+                if String(tmpStrArr[1]) == "1" {
+                    content += deviceName
+                    break
+                }
+            }
+            if content != "Winner:" {
+                for device in self.bonjourServer.devices {
+                    let data = content.data(using: String.Encoding.utf8)
+                    self.bonjourServer.send(data!, service: device)
+                }
+            }
+        }
     }
     
     func handleBody(_ body: NSString?) {
-        if preparedFlag == true && startedFlag == true {
+        if self.preparedFlag == true && self.startedFlag == true {
             let tmpTime = Date().timeIntervalSince1970
             let timeUsed = String(format: "%.02f", tmpTime - self.startTime)
             let tmpName = body as String?
@@ -69,6 +89,14 @@ class QueenViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             self.sortDataList()
             self.tableView.reloadData()
+        } else if self.preparedFlag == true && self.startedFlag == false {
+            let tmpName = body as String?
+            for device in self.bonjourServer.devices {
+                if device.name == tmpName {
+                    let data = "Not Started".data(using: String.Encoding.utf8)
+                    self.bonjourServer.send(data!, service: device)
+                }
+            }
         }
     }
     
@@ -151,17 +179,26 @@ class QueenViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.prepareBtn.setTitle("Prepared", for: .normal)
         }
     }
+    
     @IBAction func startBtnTouched(_ sender: Any) {
         if self.preparedFlag == true && self.startedFlag == false {
             print("start")
             self.startedFlag = true
             self.startTime = Date().timeIntervalSince1970
             self.startBtn.setTitle("Stop", for: .normal)
+            for device in self.bonjourServer.devices {
+                let data = "Started".data(using: String.Encoding.utf8)
+                self.bonjourServer.send(data!, service: device)
+            }
         } else if self.preparedFlag == true && self.startedFlag == true {
             print("stop")
             self.startedFlag = false
             self.startBtn.setTitle("Start", for: .normal)
             self.clearTimeAndSeq()
+            for device in self.bonjourServer.devices {
+                let data = "Stopped".data(using: String.Encoding.utf8)
+                self.bonjourServer.send(data!, service: device)
+            }
         }
     }
 

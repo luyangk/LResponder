@@ -18,9 +18,9 @@ class QueenTableViewCell: UITableViewCell {
         // Initialization code
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 5
-        self.layer.borderWidth = 2
+        self.layer.borderWidth = 1
         self.layer.shadowOffset = CGSize(width: -1, height: 1)
-        let borderColor: UIColor = .blue
+        let borderColor: UIColor = .white
         self.layer.borderColor = borderColor.cgColor
     }
 
