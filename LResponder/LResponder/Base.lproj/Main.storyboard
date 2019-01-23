@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SLF-SN-YHV">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -43,11 +43,11 @@
             <objects>
                 <viewController title="MainViewController" id="AlJ-Lk-2ws" customClass="MainViewController" customModule="LResponder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OLU-0V-qsP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p7-Df-GC7">
-                                <rect key="frame" x="80" y="272" width="160" height="160"/>
+                                <rect key="frame" x="80" y="228" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="c1Q-Sr-Vop"/>
                                     <constraint firstAttribute="height" constant="160" id="khZ-C5-5EA"/>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebv-q7-mBk">
-                                <rect key="frame" x="80" y="72" width="160" height="160"/>
+                                <rect key="frame" x="80" y="28" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="DOm-vK-WYQ"/>
                                     <constraint firstAttribute="width" constant="160" id="NUL-NQ-BpU"/>
@@ -94,11 +94,11 @@
             <objects>
                 <viewController id="7d5-9W-Cyk" customClass="QueenViewController" customModule="LResponder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OGK-FB-9vs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dje-tl-l34">
-                                <rect key="frame" x="60" y="385" width="80" height="80"/>
+                                <rect key="frame" x="60" y="320" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="9yE-Qv-LIO"/>
                                     <constraint firstAttribute="width" constant="80" id="oAE-dh-KDu"/>
@@ -111,12 +111,12 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VjA-iz-N2K">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="365"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                 <color key="backgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="4BX-WV-m71"/>
-                                    <constraint firstAttribute="height" constant="365" id="cQj-9k-9Pq"/>
+                                    <constraint firstAttribute="height" constant="300" id="cQj-9k-9Pq"/>
                                 </constraints>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1529411765" green="0.63529411759999999" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -176,7 +176,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y92-rI-zWx">
-                                <rect key="frame" x="180" y="385" width="80" height="80"/>
+                                <rect key="frame" x="180" y="320" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="HC3-Up-NtN"/>
                                     <constraint firstAttribute="width" constant="80" id="weg-AK-4JR"/>
@@ -217,12 +217,12 @@
         <scene sceneID="3eQ-X0-WoE">
             <objects>
                 <viewController title="Worker" id="GGf-2h-hNV" customClass="WorkerViewController" customModule="LResponder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z7x-CA-iHc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Z7x-CA-iHc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7B-Ca-J2y">
-                                <rect key="frame" x="100.5" y="192" width="120" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7B-Ca-J2y">
+                                <rect key="frame" x="100" y="192" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="N1M-Sg-NwG"/>
                                     <constraint firstAttribute="width" constant="120" id="itT-HW-hl2"/>
@@ -235,7 +235,7 @@
                                     <action selector="respondBtnTouched:" destination="GGf-2h-hNV" eventType="touchUpInside" id="BP9-aM-rs7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdU-m4-QaP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdU-m4-QaP">
                                 <rect key="frame" x="20" y="30" width="95" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="Huq-XF-HIl"/>
@@ -244,7 +244,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peX-TO-Z9v">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peX-TO-Z9v">
                                 <rect key="frame" x="20" y="56" width="280" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="8bn-qk-K9d"/>
@@ -254,7 +254,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POi-gS-4Rv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POi-gS-4Rv">
                                 <rect key="frame" x="20" y="138" width="280" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="2tu-ei-aWm"/>

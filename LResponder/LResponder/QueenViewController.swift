@@ -152,6 +152,12 @@ class QueenViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! QueenTableViewCell
         // Configure the cell...
         let row = indexPath.row
+        if row >= self.bonjourServer.devices.count {
+            cell.teamNameLabel.text = "Waiting Team Join"
+            cell.usedTimeLabel.text = ""
+            cell.seqLabel.text = ""
+            return cell
+        }
         let tmpDeviceName = self.bonjourServer.devices[row].name
         cell.teamNameLabel.text = tmpDeviceName
         let tmpStrArr = self.dataList[tmpDeviceName]?.split(separator: ":")
